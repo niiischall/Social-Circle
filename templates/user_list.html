@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <style>
+            body
+            {
+                background-image: linear-gradient(to left top, rgba(255,0,0,0), rgb(214, 24, 24))
+            }
+            
+            .card
+            {
+                margin:auto;
+                margin-top: 3%;
+               
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            {% for user in userDetails %}
+            <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{user.profile_pic}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{user.username}}</h5>
+                      <p><i class="fas fa-map-marker-alt"></i> {{user.location}}</p>
+                      <a href="/user_profile/{{user.id}}" class="btn btn-danger">Check Profile</a>
+                    </div>
+            </div>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+{% endblock %}

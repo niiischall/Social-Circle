@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/37bf7ed5fc.js" crossorigin="anonymous"></script>
+        <style>
+            body
+            {
+                font-family: 'Rubik',sans-serif;
+                font-size:20px;
+                font-weight: 600;
+            }
+
+            button
+            {
+                margin-left:20px;
+            }
+        </style>
+    </head>
+
+    <body>
+            <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color:#f54b4b;">
+                <a class="navbar-brand" href="/home"><i class="fas fa-hashtag"></i> Social Circle</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                           <a class="nav-link" href="/feed">Feed<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                           <a class="nav-link" href="/user_profile/{{current_user.id}}">Profile</a>
+                      </li>
+                      <li class="nav-item">
+                           <a class="nav-link" href="/user_list">Users</a>
+                      </li>
+                    </ul>
+
+                    <a href="/posting"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-plus-circle"></i> Post Something</button></a>
+
+                    <a href="/details"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-info-circle"></i> Add Details</button></a>
+
+                    <a href="/logout"><button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-sign-out-alt"></i> Log Out</button></a>
+                </div>
+            </nav>
+
+            {% block body %}
+            {% endblock %}
+    </body>
+</html>

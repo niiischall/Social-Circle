@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<html>
+    <head></head>
+
+    <body>
+        <h1>Welcome {{now_user.email}}</h1>
+        <form method = "post" action = "addd_post">
+            <label>Enter Post Here:</label>
+            <input id="pcontent" type="text" name="pcontent">
+            <input id="pemail" type="hidden" name="pemail" value="{{now_user.email}}"/>
+            <input type = "submit"/>
+        </form>
+    </body>
+</html>
+{% endblock %}

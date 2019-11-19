@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<html>
+    <head>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body
+            {
+               background-image:url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+                background-size:cover;
+                background-position: center;
+            }
+            
+            #content
+            {
+                text-align: center;
+                margin-top:15%;
+                color:#f54b4b;
+	            text-align: center;
+                text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+	             0px 8px 13px rgba(0,0,0,0.1),
+                 0px 13px 23px rgba(0,0,0,0.1);
+                
+            }
+
+            hr
+            {
+	           width:400px;
+	           border-top:1px solid #f54b4b;
+	           border-bottom: 1px solid rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="content">	
+            <div class="row">
+                <div class="col-lg-12"></h1>
+                    <h1>Social Circle</h1>
+                    <h3>The New-Age Social Media</h3>
+                    <hr>
+                    <button class="btn btn-default btn-lg">Get Started!</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}

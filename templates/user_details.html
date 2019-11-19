@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-image: linear-gradient(to left top, rgba(255,0,0,0), rgb(214, 24, 24))
+            }
+
+            #container
+            {
+                text-align: center;
+                width:75%;
+                height:70%;
+                padding:50px;
+                margin-top:5%;
+                margin-left:12.5%;
+                margin-right:12.5%;
+                background-color: whitesmoke;
+                color: rgb(214, 24, 24);
+                transform:skew(-10deg);
+            }
+
+            form   
+            {
+                transform:skew(+10deg);
+            }
+            
+            
+        </style>
+    </head>
+
+    <body>
+
+    <div id="container">  
+        <form method='post' action='add_details'>
+                <h1>Enter Your Details:</h1>
+            <div class="form-group">
+               <input type="hidden" id="pid" name="pid" value="{{present_user.id}}"> 
+               <label>Username: </label>
+                 <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Username" name="username">
+            </div>
+            
+            <div class="form-group">
+               <label>Profile Picture: </label>
+               <input type="text" class="form-control" id="profile_pic" name="profile_pic" placeholder="Give Profile Picture">
+            </div>
+            
+            <div class="form-group">
+                <label>Location: </label>
+                <input id = 'user_location' class = "form-control" type= 'text' name='user_location' placeholder="Enter Your Location"> 
+            </div>
+
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+    </div>
+
+        <!--<form method='post' action='add_details'>
+            
+            <label>
+                <p>Enter Your Username: </p>
+                <input id = 'username' type= 'text' name='username'/> 
+            </label>
+            <label>
+                <p>Give Your Profile Pic: </p>
+                <input id = 'profile_pic' type= 'text' name='profile_pic'/>   
+            </label>
+            <label>
+                    <p>Enter Your Location: </p>
+                    <input id = 'user_location' type= 'text' name='user_location'/>
+            </label> 
+            <input type='submit'>   
+        </form>-->
+    </body>
+</html>
+{% endblock %}
